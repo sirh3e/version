@@ -1,12 +1,12 @@
 #!/bin/sh
 
-if [ -z $1 ]
+if [ -z "${1}" ]
 then
   echo "Project name can not be null"
   exit 1
 fi
 
-PROJECT_NAME=$( echo "$1" | tr '[a-z]' '[A-Z]' )
+PROJECT_NAME=$( echo "$1" | tr '[:lower:]' '[:upper:]' )
 
 PROJECT_VERSION_MAJOR=$2
 case "${PROJECT_VERSION_MAJOR}" in
