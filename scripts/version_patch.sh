@@ -15,7 +15,7 @@ then
     echo "project name cannot be empty"
     exit 1
 fi
-PROJECT_NAME=$( echo "$1" | tr '[a-z]' '[A-Z]' )
+PROJECT_NAME=$( echo "$1" | tr '[:lower:]' '[:upper:]' )
 
 PROJECT_VERSION_MAJOR=$2
 case "${PROJECT_VERSION_MAJOR}" in
