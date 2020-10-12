@@ -17,22 +17,22 @@ then
 fi
 PROJECT_NAME=$( echo "$1" | tr '[:lower:]' '[:upper:]' )
 
-PROJECT_VERSION_MAJOR=$2
+PROJECT_VERSION_MAJOR=$3
 case "${PROJECT_VERSION_MAJOR}" in
   ''|*[!0-9]*) echo "PROJECT_VERSION_MAJOR is not a number"; exit 1;;
 esac
 
-PROJECT_VERSION_MINOR=$3
+PROJECT_VERSION_MINOR=$4
 case "${PROJECT_VERSION_MINOR}" in
   ''|*[!0-9]*) echo "PROJECT_VERSION_MINOR is not a number"; exit 1;;
 esac
 
-PROJECT_VERSION_PATCH=$4
+PROJECT_VERSION_PATCH=$5
 case "${PROJECT_VERSION_PATCH}" in
   ''|*[!0-9]*) echo "PROJECT_VERSION_PATCH is not a number"; exit 1;;
 esac
 
-PROJECT_VERSION_RELEASE_CANDIDATE=$5
+PROJECT_VERSION_RELEASE_CANDIDATE=$6
 case "${PROJECT_VERSION_RELEASE_CANDIDATE}" in
   ''|*[!0-9]*) echo "PROJECT_VERSION_RELEASE_CANDIDATE is not a number"; exit 1;;
 esac
