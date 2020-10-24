@@ -8,7 +8,7 @@ fi
 
 PROJECT_NAME=$( echo "$1" | tr '[:lower:]' '[:upper:]' )
 
-PROJECT_VERSION_GIT_HASH=$2
+PROJECT_VERSION_GIT_HASH="${2}"
 if [ -z "${PROJECT_VERSION_GIT_HASH}" ]
 then
   echo "Project version git hash can not be null"
